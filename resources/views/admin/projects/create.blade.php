@@ -38,11 +38,25 @@
             <select name="technology_id" class="form-select" aria-label="Default select example">
                 <option value="">Select Technology</option>
                 @foreach ($technologies as $technology)
-                    <option value="{{ $technology->id }}"
-                        @if (old('technology_id') == $technology->id) selected @endif
-                        >{{ $technology->name }}</option>
+                    <option value="{{ $technology->id }}" @if (old('technology_id') == $technology->id) selected @endif>
+                        {{ $technology->name }}</option>
                 @endforeach
             </select>
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">Types: </label>
+            <div class="btn-group btn-group-sm" role="group">
+
+                @foreach ($types as $type)
+                    <input name="types[]" id="type_{{ $type->id }}" type="checkbox"
+                        class="btn-check" id="btncheck1" autocomplete="off"
+                        value="{{ $type->id }}"
+                        @if (in_array($type->id, old('types', []))) checked @endif>
+                    <label class="btn btn-outline-primary" for="type_{{ $type->id }}">{{ $type->name }}</label>
+                @endforeach
+
+            </div>
         </div>
 
         <div class="mb-3">

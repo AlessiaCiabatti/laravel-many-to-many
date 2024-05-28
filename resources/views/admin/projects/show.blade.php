@@ -11,11 +11,11 @@
         <p>Technology: <span class="badge bg"> {{ $project->technology->name }} </span></p>
     @endif
 
-    @if (!count($project->types) > 0)
-        @foreach ($project->types as $type)
-            <p>Type: <span class="badge bg"> {{ $type->name }} </span></p>
+    @if (count($project->types) > 0)
+    <p> Type:@foreach ($project->types as $type)
+            <span class="badge bg"> {{ $type->name }} </span>
             </td>
-        @endforeach
+        @endforeach </p>
     @endif
 
     <p>Time reading: {{ $project->reading_time }} mins.</p>
