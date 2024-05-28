@@ -18,7 +18,7 @@
             <li>
                 <a class="text-white cta" href="{{ route('admin.projects.index') }}">
                     <i class="fa-solid fa-diagram-project"></i>
-                    <span>Projects</span>
+                    <span>Projects List</span>
 
                 </a>
             </li>

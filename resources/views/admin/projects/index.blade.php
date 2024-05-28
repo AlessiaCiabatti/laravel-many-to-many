@@ -26,6 +26,7 @@
                 <th scope="col"><a href="{{ route('admin.orderBy',  ['direction'=>$direction, 'column'=>'id']) }}">ID</a></th>
                 <th scope="col"><a href="{{ route('admin.orderBy',  ['direction'=>$direction, 'column'=>'title']) }}">Title</a></th>
                 <th scope="col">Technology</th>
+                <th scope="col">Type</th>
                 <th scope="col">Image</th>
                 <th scope="col"><a href="{{ route('admin.orderBy',  ['direction'=>$direction, 'column'=>'updated_at']) }}">Data</a></th>
                 <th class="second_th-pro" scope="col">Actions</th>
@@ -37,6 +38,13 @@
                     <td class="project">{{ $project->id }}</td>
                     <td>{{ $project->title }}</td>
                     <td>{{ $project->technology?->name }}</td>
+                    <td>
+                        @forelse ($project->types as $type)
+                            <p><span class="badge bg"> {{ $type->name }} </span></p>
+                        @empty
+                            No types
+                        @endforelse
+                    </td>
                     <td>
                         <img src="{{ asset('storage/' . $project->image) }}" class="thumb-index"
                             onerror="this.src='/img/no-image.jpg'">

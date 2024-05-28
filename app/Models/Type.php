@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Type extends Model
 {
-    public function project(){
+    public function projects(){
         return $this->belongsToMany(Project::class);
     }
 
