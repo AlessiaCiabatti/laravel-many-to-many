@@ -46,6 +46,23 @@
         </div>
 
         <div class="mb-3">
+            <label class="form-label">Types: </label>
+            <div class="btn-group btn-group-sm" role="group">
+
+                @foreach ($types as $type)
+                    <input name="types[]" id="type_{{ $type->id }}" type="checkbox"
+                        class="btn-check" id="btncheck1" autocomplete="off"
+                        value="{{ $type->id }}"
+                        @if ( $errors->any() && in_array($type->id, old('types', []))
+                        || !$errors->any() && $project->types->contains($type->id))
+                        checked @endif>
+                    <label class="btn btn-outline-primary" for="type_{{ $type->id }}">{{ $type->name }}</label>
+                @endforeach
+
+            </div>
+        </div>
+
+        <div class="mb-3">
             <label for="reading_time" class="form-label">Reading time</label>
             <input class="form-control" id="reading_time" type="number" placeholder="Reading time" name="reading_time" value="{{ old('reading_time', $project->reading_time) }}">
         </div>
