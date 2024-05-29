@@ -1,5 +1,6 @@
 <aside class="text-white">
     <div class="dashboard">
+
         <h4 class="my_db">
             <span>My</span> Dashboard
         </h4>
@@ -17,7 +18,7 @@
 
             <li>
                 <a class="text-white cta" href="{{ route('admin.projects.index') }}">
-                    <i class="fa-solid fa-diagram-project"></i>
+                    <i class="fa-solid fa-list-ul"></i>
                     <span>Projects List</span>
 
                 </a>
@@ -48,7 +49,7 @@
 
             <li>
                 <a class="text-white cta" href="{{ route('admin.technology_projects') }}">
-                    <i class="fa-solid fa-swatchbook"></i>
+                    <i class="fa-solid fa-diagram-project"></i>
                     <span>Technology/Projects</span>
                 </a>
             </li>

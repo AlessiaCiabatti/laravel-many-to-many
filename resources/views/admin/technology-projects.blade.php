@@ -3,7 +3,7 @@
 @section('content')
     <h1 class="mb-4">List technologies</h1>
 
-    <table class="table crud-table">
+    <table class="tech-pro table crud-table">
         <thead>
             <tr>
                 <th scope="col">Technology</th>
@@ -20,7 +20,7 @@
                         <ul class="list-group">
                             @foreach ($technology->projects as $projects)
                             <li class="list-group-item">
-                                <a href="{{ route('admin.projects.show', $projects) }}">
+                                <a class="text-black" href="{{ route('admin.projects.show', $projects) }}">
                                     {{ $projects->id }} - {{ $projects->title }}
                                 </a>
                             </li>

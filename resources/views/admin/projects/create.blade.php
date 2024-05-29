@@ -44,7 +44,7 @@
             </select>
         </div>
 
-        <div class="mb-3">
+        <div class="mb-3 checkbox">
             <label class="form-label">Types: </label>
             <div class="btn-group btn-group-sm" role="group">
 

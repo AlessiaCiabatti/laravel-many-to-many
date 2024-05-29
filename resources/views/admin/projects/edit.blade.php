@@ -23,7 +23,7 @@
     <form class="w-50" action="{{ route('admin.projects.update', $project) }}" method="POST"
     enctype="multipart/form-data">
         @csrf
-
+        @method('PUT')
         <div class="mb-3">
             <label for="title" class="form-label">Title (*)</label>
             <input class="form-control @error('title') is-invalid @enderror" id="title" type="text" placeholder="Title" name="title" value="{{ old('title', $project->title) }}">

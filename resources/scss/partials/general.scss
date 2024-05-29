@@ -5,7 +5,6 @@ body {
     font-style: normal;
   }
 
-
 .main-wrapper {
     height: calc(100vh - 56px);
     background-color: #fff3ed;
@@ -13,6 +12,7 @@ body {
         height: 100%;
         width: 100%;
         overflow: auto;
+
     }
 }
 
@@ -27,21 +27,30 @@ header.navbar {
 
 aside {
     background-color: #ffb5a0;
-    width: 350px;
+    width: 300px;
     flex-shrink: 0;
     padding-left: 15px;
 
     .dashboard {
         margin-left: 18px;
+
+        .prova {
+            width: 200px;
+            height: 100px;
+            background-color: #0074D9;
+            border-radius: 20px 0 0 20px; /* Angoli arrotondati */
+        }
     }
 
     ::before {
-        font-size: 1.1rem;
+        font-size: 1rem;
         margin-right: 16px;
+        padding-left: 2px
     }
 
+
     i.plus.fa-solid.fa-file {
-        margin-left: 5px;
+        margin-left: 3px;
     }
 
     .my_db {
@@ -64,14 +73,16 @@ aside {
         padding-left: 15px;
 
         li {
-            line-height: 80px;
+            line-height: 70px;
             position: relative;
 
-            a {
-                text-decoration: none;
-            }
         }
     }
+
+}
+
+a {
+    text-decoration: none;
 }
 
 
@@ -100,10 +111,10 @@ aside {
 
     span {
         position: relative;
-        letter-spacing: 0.25em;
+        letter-spacing: 0.20em;
         text-transform: uppercase;
         // vertical-align: middle;
-        font-size: 0.9rem;
+        font-size: 0.8rem;
     }
 
     svg {
@@ -240,3 +251,13 @@ form{
 span.badge.bg {
     background-color: #ff58337c;
 }
+
+.checkbox .btn.btn-outline-primary {
+    color: black;
+    border-color: #ff58337c;
+}
+
+.checkbox .btn-check:checked + .btn.btn-outline-primary {
+    background-color: #ff58337c;
+}
+

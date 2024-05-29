@@ -23,12 +23,12 @@
     <table class="table crud-table">
         <thead>
             <tr>
-                <th scope="col"><a href="{{ route('admin.orderBy',  ['direction'=>$direction, 'column'=>'id']) }}">ID</a></th>
-                <th scope="col"><a href="{{ route('admin.orderBy',  ['direction'=>$direction, 'column'=>'title']) }}">Title</a></th>
+                <th scope="col">&#8226;<a class="text-black" href="{{ route('admin.orderBy',  ['direction'=>$direction, 'column'=>'id']) }}">ID</a></th>
+                <th scope="col">&#8226;<a class="text-black" href="{{ route('admin.orderBy',  ['direction'=>$direction, 'column'=>'title']) }}">Title</a></th>
                 <th scope="col">Technology</th>
                 <th scope="col">Type</th>
                 <th scope="col">Image</th>
-                <th scope="col"><a href="{{ route('admin.orderBy',  ['direction'=>$direction, 'column'=>'updated_at']) }}">Data</a></th>
+                <th scope="col">&#8226;<a class="text-black" href="{{ route('admin.orderBy',  ['direction'=>$direction, 'column'=>'updated_at']) }}">Data</a></th>
                 <th class="second_th-pro" scope="col">Actions</th>
             </tr>
         </thead>
